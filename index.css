@@ -1,0 +1,381 @@
+/* Reset de márgenes y padding */
+* {
+    margin: 0;  /* Se establece en 0 para evitar márgenes no deseados */
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif
+}
+
+@font-face {
+    font-family: 'Akira';
+    src: url('Akira\ Expanded\ Demo.otf') format('truetype');
+}
+@font-face {
+    font-family: 'Rosemary';
+    src: url('BrownRosemary.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Louis';
+    src: url('Louis\ George\ Cafe.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'colvetica';
+    src: url('Coolvetica\ Rg.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'keepcalm';
+    src: url('KeepCalm-Medium.ttf') format('truetype');
+}
+
+/* Encabezado */
+header {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #333;
+    padding: 10px 20px;
+    height: 120px; /* Establece una altura fija para el header */
+}
+
+/* Imagen dentro del encabezado */
+.header-left img {
+    height: 100%; /* Ajusta la altura a la del encabezado */
+    width: auto; /* Asegura que la imagen no se distorsione */
+    object-fit: cover; /* Mantiene el aspecto de la imagen sin distorsionarla */
+    max-width: 35%; /* Controla el tamaño máximo de la imagen */
+}
+
+/* Estilo del nav (menú) a la derecha */
+.header-right {
+    display: flex;
+    justify-content: flex-end;
+    width: 80%;
+}
+
+.header-right ul {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+    font-family: colvetica;
+}
+
+.header-right a {
+    text-decoration: none;
+    font-size: 22px;
+    color: #000000;
+}
+
+.header-right a:hover {
+    color: #000000;
+}
+
+/* Banner */
+#banner {
+    padding: 100px 20px;
+    text-align: center;
+    background-color: #000000;
+    background-image: url('Banner\ para\ parte\ transformamos\ tu\ imagen.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 300px; /* Reducido para mejor visualización en móviles */
+    font-family: rosemary;
+}
+
+#banner h2 {
+    font-size: 46px;
+    margin-bottom: 10px;
+}
+
+#banner p {
+    font-size: 30px;
+}
+
+/* Servicios */
+#servicios {
+    padding: 100px 30px;
+    text-align: center;
+    background-color: #d4d1d1;
+    font-family: rosemary;
+}
+
+#servicios h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.service-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    background-color: white;
+    width: 270px;
+    padding: 40px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 70px; /* Añadido para espacio entre elementos */
+}
+
+.service-item:hover {
+    transform: scale(1.05);
+}
+
+.service-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.service-item h3 {
+    font-size: 24px;
+    margin-top: 15px;
+}
+
+.service-item p {
+    font-size: 20px;
+    margin-top: 10px;
+    font-family: Louis ;
+}
+
+/* Portafolio */
+#portafolio {
+    padding: 100px 20px;
+    text-align: center;
+    background-color: #ffffff;
+    font-family: rosemary;
+    background-image: url(fondo\ para\ portafolio+.jpg);
+}
+
+#portafolio h2 {
+    font-size: 50px;
+    margin-bottom: 60px;
+}
+
+.portfolio-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Se ajusta automáticamente a las pantallas */
+    grid-gap: 15px;
+    justify-items: center;
+    width: 100%;
+    box-sizing: border-box; /* Asegura que el contenedor ocupe todo el ancho disponible */
+}
+
+.portfolio-item {
+    width: 100%; /* Se ajusta al contenedor */
+    max-width: 250px; /* Limitamos el tamaño máximo para las imágenes */
+    height: auto; /* Altura automática para mantener la proporción */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-item img {
+    width: 100%; /* La imagen ocupa el 100% del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    object-fit: cover; /* Ajusta la imagen sin distorsionarla */
+}
+
+/* Testimonios */
+#testimonios {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+    overflow: hidden; /* Asegura que los testimonios que salen por un lado no se vean */
+}
+
+.testimonial-slider {
+    display: flex;
+    gap: 20px; /* Espacio entre los testimonios */
+    animation: slideLeftToRight 15s linear infinite; /* Animación para mover los testimonios */
+    justify-content: flex-start;
+}
+
+.testimonial-item {
+    width: 320px;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0; /* Evita que los testimonios se achiquen */
+}
+
+.testimonial-item p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.testimonial-item h4 {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Animación de deslizamiento de izquierda a derecha */
+@keyframes slideLeftToRight {
+    0% {
+        transform: translateX(100%);  /* Comienza fuera de la pantalla (a la derecha) */
+    }
+    100% {
+        transform: translateX(-100%);  /* Termina fuera de la pantalla (a la izquierda) */
+    }
+}
+
+
+/* Contacto */
+#contacto {
+    padding: 50px;
+    text-align: center;
+    background-color: #f4f4f4;
+    background-image: url('fondo\ para\ contacto.jpg');
+}
+
+#contacto h2 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #eee9e9;
+}
+
+#contacto p {
+    font-size: 22px;
+    margin-bottom: 40px;
+    color: #ffffff;
+    font-family: keepcalm;
+}
+
+.whatsapp-button {
+    display: inline-block;
+    background-color: #25d366;
+    padding: 10px 20px;
+    border-radius: 30px;
+    color: white;
+    text-decoration: none;
+}
+
+.whatsapp-button img {
+    width: 40px;
+    height: 40px;
+    margin-right: 50px;
+}
+
+/* Footer */
+footer {
+    padding: 30px;
+    text-align: center;
+    background-color: #161515;
+    color: white;
+}
+
+footer p {
+    margin-bottom: 20px;
+}
+
+footer .social-links a {
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+}
+
+/* Media Queries para móviles */
+@media (max-width: 768px) {
+    .header-left img {
+        max-width: 60%;  /* Imagen más pequeña en dispositivos pequeños */
+    }
+
+    .header-right ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #banner h2 {
+        font-size: 28px;
+    }
+
+    #servicios h2 {
+        font-size: 24px;
+    }
+
+    .service-container {
+        flex-direction: column;
+    }
+
+    .service-item {
+        width: 80%; /* Los elementos de servicio ocupan más espacio */
+        margin-bottom: 20px;
+    }
+
+    .portfolio-gallery {
+        grid-template-columns: repeat(2, 1fr); /* Mostrar 2 elementos por fila en móvil */
+    }
+
+    .testimonial-slider {
+        flex-direction: column;
+    }
+
+    .testimonial-item {
+        width: 100%; /* Testimonios a pantalla completa */
+        margin: 10px 0;
+    }
+
+    .whatsapp-button {
+        padding: 8px 15px; /* Tamaño más pequeño para botones en móviles */
+    }
+}
+
+/* Estilo para el icono flotante */
+.floating-icon {
+    position: fixed;
+    top: 0; /* Comienza desde la parte superior */
+    right: 10px; /* Distancia desde el lado derecho */
+    width: 60px; /* Tamaño del icono */
+    height: 60px;
+    background-color: #25D366; /* Color de fondo (puedes cambiarlo según tu icono) */
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    animation: floatingMove 9s ease-in-out infinite;
+}
+
+/* Imagen dentro del icono */
+.floating-icon img {
+    width: 60px;
+    height: 60px;
+}
+
+/* Animación de movimiento vertical */
+@keyframes floatingMove {
+    0% {
+        top: 0; /* Comienza desde la parte superior */
+    }
+    0% {
+        top: 60%; /* Movimiento hacia abajo (puedes ajustar este valor) */
+    }
+    100% {
+        top: 100; /* Vuelve a la parte superior */
+    }
+}
+
+/* Efecto de hover para aumentar el tamaño del icono */
+.floating-icon:hover {
+    transform: scale(1.1);
+}
+
